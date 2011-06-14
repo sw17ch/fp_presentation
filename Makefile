@@ -1,14 +1,18 @@
 BUILD_DIR=build
 
-slides.pdf : slides.tex
-	pdflatex -output-directory=${BUILD_DIR} slides.tex
-	pdflatex -output-directory=${BUILD_DIR} slides.tex
-	pdflatex -output-directory=${BUILD_DIR} slides.tex
-	cp ${BUILD_DIR}/slides.pdf slides.pdf
+MAIN=slides.tex
+OUTPUT=slides.pdf
+FILES=src/*.tex
+
+${OUTPUT} : ${MAIN} ${FILES}
+	pdflatex -output-directory=${BUILD_DIR} ${MAIN}
+	# pdflatex -output-directory=${BUILD_DIR} slides.tex
+	# pdflatex -output-directory=${BUILD_DIR} slides.tex
+	cp ${BUILD_DIR}/${OUTPUT} ${OUTPUT}
 
 clean :
 	rm -rf ${BUILD_DIR}/*
-	rm slides.pdf
+	rm ${OUTPUT}
 
-view : slides.pdf
-	open slides.pdf
+view : ${OUTPUT}
+	open ${OUTPUT}
