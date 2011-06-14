@@ -1,9 +1,3 @@
-build/
-*.aux
-*.log
-*.nav
-*.out
+build/*
 *.pdf
-*.snm
-*.toc
 .*.swp
