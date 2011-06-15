@@ -1,12 +1,58 @@
 \begin{frame}
-  \frametitle{Introduction}
-  \framesubtitle{Functional Programming, Haskell, and Gentex}
+  What is Functional Programming?
+\end{frame}
 
-  \center
+\begin{frame}
+  Three fuzzy groups:
 
-  \huge
-  Functional Programming
+  \begin{itemize}
+    \item<1-> \textbf{Procedural:}      Ada, BASIC, C
+    \item<2-> \textbf{Object Oriented:} C\#, C++, Java
+    \item<3-> \textbf{Functional:}      Lisp, F\#, Erlang, Scala, Haskell
+  \end{itemize}
 
-  \normalsize
-  \emph{Don't be scared.}
+  % 3x to get through the list
+  \pause
+  \pause
+  \pause
+
+  Note: Focusing on 'pure' functional programming.
+\end{frame}
+
+\begin{frame}
+  Procedural
+
+  \begin{itemize}
+    \item<1-> Modular sequences of steps
+    \item<2-> Collections handled with loops
+    \item<3-> Data exposed directly
+    \item<4-> State transformed until correct
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \input{snippets/procedural.tex}
+\end{frame}
+
+\begin{frame}
+  Object Oriented
+
+  \begin{itemize}
+    \item<1-> Objects
+    \item<2-> Data hiding
+    \item<3-> Types
+    \item<4-> Collections handled with loop-like construct
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  Functional
+
+  \begin{itemize}
+    \item<1-> Computation is the evaluation of mathematical functions
+    \item<2-> Free of side-effects
+    \item<3-> No assignment
+    \item<4-> No loops % consequence of no assigment
+    \item<5-> Recursion!
+  \end{itemize}
 \end{frame}

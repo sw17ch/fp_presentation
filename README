@@ -1,0 +1,4 @@
+Requires:
+  - LaTeX
+  - Beamer package
+  - Pygments - http://pygments.org/download/
