@@ -1,16 +1,27 @@
+C_DIR=c/
+HS_DIR=hs/
+RB_DIR=rb/
 PYGMENTS=pygments.tex
-SNIPPETS=procedural.tex oo.tex
 
-all : ${SNIPPETS} ${PYGMENTS}
+all : ${PYGMENTS} c hs rb
 
 pygments.tex : 
 	python -c 'import pygments.formatters as f; print f.latex.LatexFormatter().get_style_defs()' > $@
 
-procedural.tex : procedural.c
-	pygmentize -f latex $< > $@
+.PHONY : c
+c :
+	$(MAKE) -C $(C_DIR)
 
-oo.tex : oo.rb
-	pygmentize -f latex $< > $@
+.PHONY : hs
+hs :
+	$(MAKE) -C $(HS_DIR)
+
+.PHONY : rb
+rb :
+	$(MAKE) -C $(RB_DIR)
 
 clean :
 	rm -rf *.tex
+	$(MAKE) -C $(C_DIR) clean
+	$(MAKE) -C $(HS_DIR) clean
+	$(MAKE) -C $(RB_DIR) clean
