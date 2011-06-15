@@ -20,10 +20,10 @@
 \end{frame}
 
 \begin{frame}
-  Procedural
+  \frametitle{Procedural}
 
   \begin{itemize}
-    \item<1-> Modular sequences of steps
+    \item<1-> Basic unit of abstraction: library
     \item<2-> Collections handled with loops
     \item<3-> Data exposed directly
     \item<4-> State transformed until correct
@@ -31,32 +31,82 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \input{snippets/procedural.tex}
+  \frametitle{Procedural Aggregation}
+
+  \input{snippets/c/procedural_aggregate.tex}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Procedural Transformation}
+
+  \input{snippets/c/procedural_transform.tex}
 \end{frame}
 
 \begin{frame}
-  Object Oriented
+  \frametitle{Object Oriented}
 
   \begin{itemize}
-    \item<1-> Objects
-    \item<2-> Data hiding
-    \item<3-> Types
-    \item<4-> Collections handled with loop-like construct
+    \item<1-> Basic unit of abstraction: inheritance
+    \item<2-> Objects
+    \item<3-> Data hiding
+    \item<4-> Types
+    \item<5-> Collections handled with loop-like construct
   \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
-  \input{snippets/oo.tex}
+  \frametitle{OO Aggregation}
+
+  \input{snippets/rb/oo_aggregate.tex}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{OO Transformation}
+
+  \input{snippets/rb/oo_transform.tex}
 \end{frame}
 
 \begin{frame}
-  Functional
+  \frametitle{Functional}
 
   \begin{itemize}
-    \item<1-> Computation is the evaluation of mathematical functions
-    \item<2-> Free of side-effects
-    \item<3-> No assignment
-    \item<4-> No loops % consequence of no assigment
-    \item<5-> Recursion!
+    \item<1-> Basic unit of abstraction: functions
+    \item<2-> Computation is the evaluation of mathematical functions
+    \item<3-> Single assignment (can't change variables)
+    \item<4-> Free of side-effects
+    \item<5-> Consequently, no loops
+    \item<6-> Recursion!
   \end{itemize}
 \end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Functional Aggregation - C Syntax}
+
+  \input{snippets/c/c_functional_aggregate.tex}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Functional Transform - C Syntax}
+
+  \input{snippets/c/c_functional_transform.tex}
+\end{frame}
+
+% Grab the slides on Haskell Syntax
+\input{src/haskell_syntax.tex}
+
+\begin{frame}
+  Revisit the functional examples.
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Aggregate with Generalization}
+
+  \input{snippets/hs/functional_aggregate.tex}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Aggregate with Generalization}
+
+  \input{snippets/hs/functional_transform.tex}
+\end{frame}
+
