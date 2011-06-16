@@ -3,7 +3,7 @@ SNIPS_DIR=snippets
 
 MAIN=slides.tex
 OUTPUT=slides.pdf
-FILES=src/*.tex
+FILES=src/*.tex graphics/*.pdf
 
 all : snippets ${OUTPUT}
 
