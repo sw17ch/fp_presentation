@@ -5,90 +5,107 @@
 \begin{frame}
   Three fuzzy groups:
 
-  \begin{itemize}
-    \item<1-> \textbf{Procedural:}      Ada, BASIC, C
-    \item<2-> \textbf{Object Oriented:} C\#, C++, Java
-    \item<3-> \textbf{Functional:}      Lisp, F\#, Erlang, Scala, Haskell
+  \begin{itemize}[<+->]
+    \item \textbf{Procedural:}      Ada, BASIC, C
+    \item \textbf{Object Oriented:} C\#, C++, Java
+    \item \textbf{Functional:}      Lisp, F\#, Erlang, Scala, Haskell
+    \item \emph{Note: Focusing on 'pure' functional programming.}
   \end{itemize}
-
-  % 3x to get through the list
-  \pause
-  \pause
-  \pause
-
-  Note: Focusing on 'pure' functional programming.
 \end{frame}
 
 \begin{frame}
   \frametitle{Procedural}
-
-  \begin{itemize}
-    \item<1-> Basic unit of abstraction: library
-    \item<2-> Collections handled with loops
-    \item<3-> Data exposed directly
-    \item<4-> State transformed until correct
+  \pause
+  \begin{itemize}[<+->]
+    \item Basic unit of abstraction: library of procedures
+    \item Collections handled with loops
+    \item Data exposed directly
+    \item State transformed until correct
   \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Procedural Aggregation}
-
+  \pause
   \input{snippets/c/procedural_aggregate.tex}
 \end{frame}
 
 \begin{frame}[fragile]
-    \frametitle{Procedural Transformation}
-
+  \frametitle{Procedural Transformation}
+  \pause
   \input{snippets/c/procedural_transform.tex}
 \end{frame}
 
 \begin{frame}
   \frametitle{Object Oriented}
-
-  \begin{itemize}
-    \item<1-> Basic unit of abstraction: inheritance
-    \item<2-> Objects
-    \item<3-> Data hiding
-    \item<4-> Types
-    \item<5-> Collections handled with loop-like construct
+  \begin{itemize}[<+->]
+    \item Objects and Types
+    \item Basic unit of abstraction: inheritance of concepts
+    \item Collections handled with loops, but hidden in methods
   \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{OO Aggregation}
+  \pause
+  \input{snippets/rb/oo_aggregate_1.tex}
+\end{frame}
 
-  \input{snippets/rb/oo_aggregate.tex}
+\begin{frame}[fragile]
+  \frametitle{OO Aggregation}
+  \input{snippets/rb/oo_aggregate_2.tex}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{OO Transformation}
-
+  \pause
   \input{snippets/rb/oo_transform.tex}
 \end{frame}
 
 \begin{frame}
   \frametitle{Functional}
-
-  \begin{itemize}
-    \item<1-> Basic unit of abstraction: functions
-    \item<2-> Computation is the evaluation of mathematical functions
-    \item<3-> Single assignment (can't change variables)
-    \item<4-> Free of side-effects
-    \item<5-> Consequently, no loops
-    \item<6-> Recursion!
+  \pause
+  \begin{itemize}[<+->]
+    \item Basic unit of abstraction: functions
+    \item Computation is the evaluation of mathematical functions
+    \item Single assignment (can't change variables)
+    \item Consequences
+          \begin{itemize}[<+->]
+            \item Side-effect free!
+            \item Order independence!
+            \item No loops (uh oh...)
+            \item Recursion for aggregates!
+          \end{itemize}
   \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Functional Aggregation - C Syntax}
-
+  \pause
   \input{snippets/c/c_functional_aggregate.tex}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Functional Transform - C Syntax}
-
+  \pause
   \input{snippets/c/c_functional_transform.tex}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Haskell!}
+  \pause
+  \begin{itemize}[<+->]
+    \item Referentially transparent (values don't change)
+    \item Statically typed (no type coercion)
+    \item Polymorphic (code reuse)
+    \item Type inference (automatically determine the type of an expression)
+    \item Lazy evaluation (demand driven)
+    \item Infinitely precise integers!
+    \item Usually garbage collected
+    \item Compiled or interpreted
+    \item Multi-threading
+    \item Fast!
+  \end{itemize}
 \end{frame}
 
 % Grab the slides on Haskell Syntax
@@ -100,13 +117,13 @@
 
 \begin{frame}[fragile]
   \frametitle{Aggregate with Generalization}
-
+  \pause
   \input{snippets/hs/functional_aggregate.tex}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Aggregate with Generalization}
-
+  \pause
   \input{snippets/hs/functional_transform.tex}
 \end{frame}
 
