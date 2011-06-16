@@ -3,3 +3,4 @@
 build/*
 snippets/*.tex
 snippets/*/*.tex
+.DS_Store
