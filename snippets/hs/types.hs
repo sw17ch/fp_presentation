@@ -12,3 +12,6 @@ one :: Int
 one = 1
 
 subtractOne a = a - one -- Inferred type: (Int -> Int)
+
+-- Partial Application
+(add 1) :: Int -> Int

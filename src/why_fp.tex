@@ -1,7 +1,31 @@
 \begin{frame}
-  Why use Functional Programming?
+  Why use Haskell (or other functional languages)?
 \end{frame}
 
 \begin{frame}
+  \frametitle{Why Haskell?}
+  \begin{itemize}[<+->]
+    \item Large classes of bugs eliminated
+      \begin{itemize}[<+->]
+        \item Runtime errors are incredibly rare (strong types)
+        \item Referential transparency
+        \item No side-effects
+        \item Expressive type system 
+          \begin{itemize}[<+->]
+            \item Everything encoded by a type is something that doesn't need to be
+                  checked by the programmer or the code.
+            \item Example: have compiler distinguish between counting numbers and ID numbers
+          \end{itemize}
+      \end{itemize}
+    \item Little dependence on explicit ordering.
+    \item Short, concise programs
+      \begin{itemize}[<+->]
+        \item Expressive types
+        \item Type inference
+        \item Polymorphism
+        \item Lazy evaluation % sometimes defining everything then picking a subset is shorter
+      \end{itemize}
+    \item Ease of maintenance and understanding (once the syntax is understood)
+    \item Excellent community (mailing lists, IRC, StackExchange, reddit.com/r/haskell)
+  \end{itemize}
 \end{frame}
-
