@@ -1,5 +1,5 @@
 *.pdf
 .*.swp
 build/*
-snippets/*
+snippets/*.tex
 snippets/*/*.tex
